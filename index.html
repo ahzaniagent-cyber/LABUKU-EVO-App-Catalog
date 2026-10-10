@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>LABUKU EVO — Katalog Aplikasi KUA Sawoo</title>
+  <meta name="description" content="Katalog aplikasi ASN KUA Sawoo oleh Ahzani Labs.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#1E3A6B">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="LABUKU EVO">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://script.google.com">
+  <!-- Huruf dimuat tanpa menahan tampilan: jaringan kantor yang memblokir Google Fonts tidak membuat aplikasi macet -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    // Terapkan tema sebelum halaman tampil (mencegah kedipan putih di mode gelap)
+    (function () {
+      var t = null;
+      try { t = JSON.parse(localStorage.getItem('labuku_tema')); } catch (e) {}
+      if (t !== 'light' && t !== 'dark') t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+</head>
+<body>
+  <!-- ================= IKON (sprite) ================= -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></symbol>
+      <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+      <symbol id="i-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+      <symbol id="i-unlock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></symbol>
+      <symbol id="i-logout" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="m16 17 5-5-5-5"/><path d="M21 12H9"/></symbol>
+      <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+      <symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"/></symbol>
+      <symbol id="i-pencil" viewBox="0 0 24 24"><path d="M17 3a2.85 2.85 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></symbol>
+      <symbol id="i-trash" viewBox="0 0 24 24"><path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></symbol>
+      <symbol id="i-up" viewBox="0 0 24 24"><path d="m18 15-6-6-6 6"/></symbol>
+      <symbol id="i-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+      <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></symbol>
+      <symbol id="i-external" viewBox="0 0 24 24"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></symbol>
+      <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></symbol>
+      <symbol id="i-eye-off" viewBox="0 0 24 24"><path d="M9.88 9.88a3 3 0 1 0 4.24 4.24"/><path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"/><path d="M6.61 6.61A13.53 13.53 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"/><path d="m2 2 20 20"/></symbol>
+      <symbol id="i-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></symbol>
+      <symbol id="i-share" viewBox="0 0 24 24"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="m16 6-4-4-4 4"/><path d="M12 2v13"/></symbol>
+      <symbol id="i-key" viewBox="0 0 24 24"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6M15.5 7.5l3 3L22 7l-3-3"/></symbol>
+      <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
+      <symbol id="i-tag" viewBox="0 0 24 24"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r="1"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+      <symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></symbol>
+      <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></symbol>
+      <symbol id="i-star" viewBox="0 0 24 24"><path d="M11.5 2.3a.55.55 0 0 1 1 0l2.3 4.7a2.1 2.1 0 0 0 1.6 1.15l5.17.76a.53.53 0 0 1 .3.9l-3.74 3.64a2.1 2.1 0 0 0-.6 1.88l.88 5.14a.53.53 0 0 1-.77.56l-4.62-2.43a2.1 2.1 0 0 0-1.97 0L6.4 21a.53.53 0 0 1-.77-.56l.88-5.14a2.1 2.1 0 0 0-.61-1.88L2.16 9.8a.53.53 0 0 1 .3-.9l5.16-.76A2.1 2.1 0 0 0 9.22 7Z"/></symbol>
+      <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- ================= LAYAR: MEMUAT ================= -->
+  <section id="scr-loading" class="screen screen-center active" aria-label="Memuat">
+    <img src="img/logo.svg" alt="" class="splash-logo" width="72" height="72">
+    <div class="splash-title">LABUKU EVO</div>
+    <div class="spinner" aria-hidden="true"></div>
+  </section>
+
+  <!-- ================= LAYAR: KONFIGURASI BELUM LENGKAP ================= -->
+  <section id="scr-config" class="screen screen-center" aria-labelledby="config-title">
+    <div class="panel narrow">
+      <svg class="i i-xl tone-warn"><use href="#i-alert"/></svg>
+      <h1 id="config-title">Pengaturan belum lengkap</h1>
+      <p id="config-msg" class="muted">Alamat server (GAS_URL) di file <code>js/config.js</code> belum diisi.</p>
+    </div>
+  </section>
+
+  <!-- ================= LAYAR: TANPA KONEKSI ================= -->
+  <section id="scr-offline" class="screen screen-center" aria-labelledby="offline-title" aria-live="polite">
+    <div class="offline-wrap">
+      <svg class="offline-art" viewBox="0 0 320 240" role="img" aria-label="Ilustrasi tidak ada koneksi internet">
+        <circle class="oa-halo" cx="160" cy="120" r="104"/>
+        <circle class="oa-halo2" cx="160" cy="120" r="76"/>
+        <g class="oa-float">
+          <path class="oa-cloud" d="M104 156c-17.7 0-32-13.4-32-30s14.3-30 32-30c2.4 0 4.7.3 7 .7C116 76 135.4 62 158 62c24.2 0 44.5 16 50.3 37.8 2.5-.5 5-.8 7.7-.8 18.8 0 34 14.3 34 32s-15.2 25-34 25Z"/>
+          <g class="oa-wifi">
+            <path d="M126 118a48 48 0 0 1 68 0"/>
+            <path d="M138 130a31 31 0 0 1 44 0"/>
+            <path d="M150 142a14 14 0 0 1 20 0"/>
+            <circle cx="160" cy="152" r="4.5" class="oa-dot"/>
+          </g>
+          <path class="oa-slash" d="M124 100l72 64"/>
+        </g>
+        <circle class="oa-spark oa-teal s1" cx="62" cy="78" r="6"/>
+        <circle class="oa-spark oa-blue s2" cx="262" cy="70" r="5"/>
+        <circle class="oa-spark oa-teal s3" cx="272" cy="172" r="7"/>
+        <rect class="oa-spark oa-blue s4" x="46" y="166" width="11" height="11" rx="2.5"/>
+        <rect class="oa-spark oa-teal s5" x="234" y="36" width="8" height="8" rx="2"/>
+        <rect class="oa-spark oa-blue s1" x="88" y="34" width="7" height="7" rx="2"/>
+      </svg>
+      <h1 id="offline-title">Tidak ada koneksi</h1>
+      <p class="muted">Periksa data seluler atau Wi-Fi. LABUKU EVO akan tersambung lagi begitu internet kembali.</p>
+      <button type="button" class="btn btn-primary btn-lg" id="btn-retry">
+        <svg class="i"><use href="#i-refresh"/></svg> Coba lagi
+      </button>
+    </div>
+  </section>
+
+  <!-- ================= LAYAR: LOGIN ================= -->
+  <section id="scr-login" class="screen screen-center" aria-labelledby="login-title">
+    <form id="form-login" class="panel login-card" novalidate autocomplete="on">
+      <img src="img/logo.svg" alt="" class="login-logo" width="64" height="64">
+      <h1 id="login-title">LABUKU EVO</h1>
+      <p class="muted login-sub">Katalog aplikasi ASN KUA Sawoo</p>
+      <div id="login-alert" class="alert" role="alert" hidden></div>
+      <label class="field">
+        <span class="field-label">Username</span>
+        <span class="input-wrap">
+          <svg class="i input-icon"><use href="#i-user"/></svg>
+          <input type="text" id="login-user" name="username" autocomplete="username" autocapitalize="none" spellcheck="false" required>
+        </span>
+      </label>
+      <label class="field">
+        <span class="field-label">Password</span>
+        <span class="input-wrap">
+          <svg class="i input-icon"><use href="#i-lock"/></svg>
+          <input type="password" id="login-pass" name="password" autocomplete="current-password" required>
+          <button type="button" class="input-btn" data-toggle-pass="login-pass" aria-label="Tampilkan password">
+            <svg class="i"><use href="#i-eye"/></svg>
+          </button>
+        </span>
+      </label>
+      <button type="submit" class="btn btn-primary btn-block btn-lg" id="btn-login">Masuk</button>
+      <p class="login-foot">Ahzani Labs</p>
+    </form>
+  </section>
+
+  <!-- ================= LAYAR: UTAMA ================= -->
+  <section id="scr-main" class="screen" aria-label="Katalog aplikasi">
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a href="#" class="brand" id="brand" aria-label="LABUKU EVO, kembali ke beranda">
+          <img src="img/logo.svg" alt="" width="36" height="36">
+          <span class="brand-text">
+            <span class="brand-name">LABUKU EVO</span>
+            <span class="brand-by">by Ahzani Labs</span>
+          </span>
+        </a>
+        <div class="search" role="search">
+          <svg class="i search-icon"><use href="#i-search"/></svg>
+          <input type="search" id="search" placeholder="Cari aplikasi…" aria-label="Cari aplikasi" autocomplete="off" enterkeyhint="search">
+          <button type="button" class="search-clear" id="search-clear" aria-label="Hapus pencarian" hidden>
+            <svg class="i"><use href="#i-x"/></svg>
+          </button>
+        </div>
+        <div class="actions">
+          <button type="button" class="icon-btn" id="btn-install" aria-label="Pasang aplikasi" title="Pasang aplikasi" hidden>
+            <svg class="i"><use href="#i-download"/></svg>
+          </button>
+          <button type="button" class="icon-btn" id="btn-theme" aria-label="Ganti tema" title="Ganti tema">
+            <svg class="i theme-sun"><use href="#i-sun"/></svg>
+            <svg class="i theme-moon"><use href="#i-moon"/></svg>
+          </button>
+          <button type="button" class="icon-btn icon-btn-quiet" id="btn-lock" aria-label="Menu admin" title="Menu admin">
+            <svg class="i"><use href="#i-lock"/></svg>
+          </button>
+          <button type="button" class="icon-btn" id="btn-logout" aria-label="Keluar" title="Keluar">
+            <svg class="i"><use href="#i-logout"/></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="container">
+      <!-- Tampilan beranda -->
+      <div id="view-home">
+        <nav class="jump" id="jump" aria-label="Lompat ke bagian"></nav>
+        <div id="home-content"></div>
+      </div>
+
+      <!-- Tampilan hasil pencarian -->
+      <div id="view-search" hidden>
+        <div class="section-head">
+          <h2 id="search-title">Hasil pencarian</h2>
+        </div>
+        <div id="search-results" class="grid grid-cards"></div>
+      </div>
+
+      <!-- Tampilan admin -->
+      <div id="view-admin" hidden>
+        <div class="admin-head">
+          <div>
+            <button type="button" class="link-btn" id="btn-admin-back"><svg class="i"><use href="#i-left"/></svg> Kembali ke katalog</button>
+            <h2 class="admin-title">Menu Admin</h2>
+          </div>
+          <div class="admin-head-right">
+            <span class="sync" id="sync-status" aria-live="polite"></span>
+            <button type="button" class="btn btn-ghost" id="btn-admin-exit"><svg class="i"><use href="#i-unlock"/></svg> Keluar admin</button>
+          </div>
+        </div>
+        <div class="tabs" role="tablist" aria-label="Bagian menu admin">
+          <button type="button" role="tab" class="tab active" data-tab="aplikasi" aria-selected="true"><svg class="i"><use href="#i-grid"/></svg>Aplikasi</button>
+          <button type="button" role="tab" class="tab" data-tab="kategori" aria-selected="false"><svg class="i"><use href="#i-tag"/></svg>Kategori</button>
+          <button type="button" role="tab" class="tab" data-tab="password" aria-selected="false"><svg class="i"><use href="#i-lock"/></svg>Password</button>
+          <button type="button" role="tab" class="tab" data-tab="pin" aria-selected="false"><svg class="i"><use href="#i-key"/></svg>PIN</button>
+        </div>
+
+        <div class="tab-panel active" id="tab-aplikasi" role="tabpanel">
+          <div class="toolbar">
+            <p class="muted" id="admin-app-count"></p>
+            <button type="button" class="btn btn-primary" id="btn-add-app"><svg class="i"><use href="#i-plus"/></svg> Tambah aplikasi</button>
+          </div>
+          <div class="admin-list" id="admin-app-list"></div>
+        </div>
+
+        <div class="tab-panel" id="tab-kategori" role="tabpanel" hidden>
+          <form class="toolbar toolbar-form" id="form-kategori-baru" novalidate>
+            <label class="field field-inline">
+              <span class="sr-only">Nama kategori baru</span>
+              <input type="text" id="kategori-baru" maxlength="40" placeholder="Nama kategori baru, mis. Bendahara">
+            </label>
+            <button type="submit" class="btn btn-primary"><svg class="i"><use href="#i-plus"/></svg> Tambah</button>
+          </form>
+          <p class="muted small">Bagian <strong>Umum</strong> selalu berisi semua aplikasi dan tidak perlu dibuat. Kategori yang masih dipakai aplikasi tidak bisa dihapus.</p>
+          <div class="admin-list" id="admin-kat-list"></div>
+        </div>
+
+        <div class="tab-panel" id="tab-password" role="tabpanel" hidden>
+          <form class="panel form-panel" id="form-password" novalidate>
+            <h3>Ganti password bersama</h3>
+            <p class="muted small">Setelah disimpan, <strong>semua perangkat otomatis keluar</strong>, termasuk perangkat ini. Bagikan password baru hanya kepada ASN yang masih bertugas.</p>
+            <div class="alert" role="alert" hidden></div>
+            <label class="field">
+              <span class="field-label">Password baru <span class="muted">(minimal 8 karakter)</span></span>
+              <span class="input-wrap">
+                <input type="password" id="pass-baru" autocomplete="new-password" minlength="8" required>
+                <button type="button" class="input-btn" data-toggle-pass="pass-baru" aria-label="Tampilkan password"><svg class="i"><use href="#i-eye"/></svg></button>
+              </span>
+            </label>
+            <label class="field">
+              <span class="field-label">Ulangi password baru</span>
+              <span class="input-wrap">
+                <input type="password" id="pass-ulang" autocomplete="new-password" minlength="8" required>
+              </span>
+            </label>
+            <button type="submit" class="btn btn-primary">Simpan password baru</button>
+          </form>
+        </div>
+
+        <div class="tab-panel" id="tab-pin" role="tabpanel" hidden>
+          <form class="panel form-panel" id="form-pin" novalidate>
+            <h3>Ganti PIN admin</h3>
+            <p class="muted small">PIN terdiri atas 6 angka. Jangan bagikan PIN kepada pengguna lain.</p>
+            <div class="alert" role="alert" hidden></div>
+            <label class="field">
+              <span class="field-label">PIN lama</span>
+              <input type="password" id="pin-lama" inputmode="numeric" pattern="\d{6}" maxlength="6" autocomplete="off" required>
+            </label>
+            <label class="field">
+              <span class="field-label">PIN baru</span>
+              <input type="password" id="pin-baru" inputmode="numeric" pattern="\d{6}" maxlength="6" autocomplete="off" required>
+            </label>
+            <label class="field">
+              <span class="field-label">Ulangi PIN baru</span>
+              <input type="password" id="pin-ulang" inputmode="numeric" pattern="\d{6}" maxlength="6" autocomplete="off" required>
+            </label>
+            <button type="submit" class="btn btn-primary">Simpan PIN baru</button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer container">
+      <span>LABUKU EVO v1.0</span><span aria-hidden="true">·</span><span>Ahzani Labs</span>
+    </footer>
+  </section>
+
+  <!-- ================= DIALOG: PIN ADMIN ================= -->
+  <div class="modal" id="modal-pin" role="dialog" aria-modal="true" aria-labelledby="pin-title" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <form class="modal-card pin-card" id="form-pin-admin" novalidate>
+      <button type="button" class="icon-btn modal-x" data-close aria-label="Tutup"><svg class="i"><use href="#i-x"/></svg></button>
+      <div class="pin-icon"><svg class="i"><use href="#i-lock"/></svg></div>
+      <h2 id="pin-title">Masuk menu admin</h2>
+      <p class="muted small">Masukkan PIN 6 angka.</p>
+      <div class="pin-field">
+        <input type="password" id="pin-input" class="pin-input" inputmode="numeric" pattern="\d{6}" maxlength="6" autocomplete="one-time-code" aria-label="PIN admin" required>
+        <div class="pin-dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      </div>
+      <p class="pin-msg" id="pin-msg" role="alert"></p>
+      <button type="submit" class="btn btn-primary btn-block" id="btn-pin">Masuk</button>
+    </form>
+  </div>
+
+  <!-- ================= DIALOG: KONFIRMASI ================= -->
+  <div class="modal" id="modal-confirm" role="alertdialog" aria-modal="true" aria-labelledby="confirm-title" aria-describedby="confirm-msg" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card">
+      <h2 id="confirm-title">Yakin?</h2>
+      <p id="confirm-msg" class="muted"></p>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-ghost" data-close>Batal</button>
+        <button type="button" class="btn btn-danger" id="confirm-ok">Hapus</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= PANEL: TAMBAH / UBAH APLIKASI ================= -->
+  <div class="drawer" id="drawer-app" role="dialog" aria-modal="true" aria-labelledby="drawer-title" hidden>
+    <div class="drawer-backdrop" data-close></div>
+    <form class="drawer-panel" id="form-app" novalidate>
+      <div class="drawer-head">
+        <h2 id="drawer-title">Tambah aplikasi</h2>
+        <button type="button" class="icon-btn" data-close aria-label="Tutup"><svg class="i"><use href="#i-x"/></svg></button>
+      </div>
+      <div class="drawer-body">
+        <div class="alert" role="alert" hidden></div>
+        <label class="field">
+          <span class="field-label">Nama aplikasi <span class="counter" data-for="app-nama"></span></span>
+          <input type="text" id="app-nama" maxlength="60" required placeholder="mis. AKAD TRACKER">
+        </label>
+        <label class="field">
+          <span class="field-label">Deskripsi singkat <span class="counter" data-for="app-desk"></span></span>
+          <textarea id="app-desk" maxlength="120" rows="3" required placeholder="Satu kalimat tentang kegunaan aplikasi"></textarea>
+        </label>
+        <label class="field">
+          <span class="field-label">Kategori peran</span>
+          <select id="app-kat"></select>
+          <span class="field-hint">Semua aplikasi selalu tampil di <strong>Umum</strong>. Kategori menambahkannya juga ke bagian peran.</span>
+        </label>
+        <label class="field">
+          <span class="field-label">Tautan (URL)</span>
+          <input type="url" id="app-url" required placeholder="https://" inputmode="url" autocapitalize="none" spellcheck="false">
+          <span class="field-hint">Wajib diawali <code>https://</code>.</span>
+        </label>
+        <div class="preview">
+          <span class="field-label">Pratinjau kartu</span>
+          <div id="app-preview"></div>
+        </div>
+      </div>
+      <div class="drawer-foot">
+        <button type="button" class="btn btn-ghost" data-close>Batal</button>
+        <button type="submit" class="btn btn-primary" id="btn-app-save">Simpan</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- ================= PETUNJUK PASANG DI IPHONE ================= -->
+  <div class="sheet" id="sheet-ios" role="dialog" aria-labelledby="ios-title" hidden>
+    <div class="sheet-card">
+      <button type="button" class="icon-btn modal-x" id="ios-close" aria-label="Tutup"><svg class="i"><use href="#i-x"/></svg></button>
+      <img src="icons/apple-touch-icon.png" alt="" width="48" height="48" class="sheet-icon">
+      <div>
+        <h2 id="ios-title">Pasang di iPhone</h2>
+        <ol class="ios-steps">
+          <li>Buka halaman ini di <strong>Safari</strong>.</li>
+          <li>Ketuk tombol <strong>Bagikan</strong> <svg class="i i-inline"><use href="#i-share"/></svg> di bawah layar.</li>
+          <li>Pilih <strong>Tambahkan ke Layar Utama</strong>, lalu <strong>Tambah</strong>.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <div class="toasts" id="toasts" aria-live="polite" aria-atomic="false"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

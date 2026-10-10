@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Logo LABUKU EVO">
+  <!-- Logo sementara (buku terbuka: kiri hijau-teal, kanan biru). Ganti dengan logo resmi bila sudah ada. -->
+  <rect width="64" height="64" rx="15" fill="#1E3A6B"/>
+  <path d="M31 19.5C25.5 16 18 15.2 12 16.4v29.2c6-1.2 13.5-.4 19 3.1Z" fill="#2CC2AE"/>
+  <path d="M33 19.5c5.5-3.5 13-4.3 19-3.1v29.2c-6-1.2-13.5-.4-19 3.1Z" fill="#5B9CF0"/>
+  <g fill="#FFFFFF" opacity=".85">
+    <rect x="16" y="22" width="4" height="4" rx=".6"/>
+    <rect x="22" y="23" width="4" height="4" rx=".6" opacity=".6"/>
+    <rect x="16" y="28" width="4" height="4" rx=".6" opacity=".5"/>
+    <rect x="44" y="22" width="4" height="4" rx=".6"/>
+    <rect x="38" y="23" width="4" height="4" rx=".6" opacity=".6"/>
+    <rect x="44" y="28" width="4" height="4" rx=".6" opacity=".5"/>
+  </g>
+</svg>
